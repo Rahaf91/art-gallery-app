@@ -1,3 +1,4 @@
+import ArtPiece from "@/components/ArtPieces.js";
 import useSWR from "swr";
 
 const fetcher = (url) => fetch(url).then((response) => response.json());
@@ -16,6 +17,7 @@ export default function HomePage() {
   return (
     <div>
       <h1>Art Pieces App of RAI!</h1>
+      <ArtPiece pieces={data} />
     </div>
   );
 }
