@@ -1,3 +1,4 @@
+import ArtPiecePreview from "@/components/ArtPiecePreview";
 import ArtPiece from "@/components/ArtPieces.js";
 import useSWR from "swr";
 

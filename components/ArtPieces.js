@@ -1,19 +1,23 @@
-import Link from "next/link";
+import styled from "styled-components";
 import ArtPiecePreview from "./ArtPiecePreview";
+
+const StyledList = styled.li`
+  list-style: none;
+`;
 
 export default function ArtPiece({ pieces }) {
   return (
     <>
       <h1> All art pieces:</h1>
-      <div>
-        {pieces.map((piece) => (
-          <ArtPiecePreview
-            key={piece.slug}
-            image={piece.imageSource}
-            artist={piece.artist}
-          />
-        ))}
-      </div>
+      <ul>
+        {pieces.map((piece) => {
+          return (
+            <StyledList key={piece.slug}>
+              <ArtPiecePreview piece={piece} />
+            </StyledList>
+          );
+        })}
+      </ul>
     </>
   );
 }
