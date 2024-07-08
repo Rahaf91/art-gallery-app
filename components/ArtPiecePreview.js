@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import styled from "styled-components";
 
 const StyledImage = styled(Image)`
@@ -13,21 +12,11 @@ const ImageWrapper = styled.div`
   height: 200px;
 `;
 
-const StyledLink = styled(Link)`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 500px;
-  padding: 0.75rem;
-  border-radius: 10px;
-  border: 1px solid black;
-`;
-
 export default function ArtPiecePreview({ piece }) {
-  const { imageSource, name, artist, slug } = piece;
+  const { imageSource, name, artist } = piece;
 
   return (
-    <StyledLink href={slug}>
+    <>
       <ImageWrapper>
         <StyledImage
           src={imageSource}
@@ -38,6 +27,6 @@ export default function ArtPiecePreview({ piece }) {
       </ImageWrapper>
       <h3>Title: {name}</h3>
       <p>Artist: {artist}</p>
-    </StyledLink>
+    </>
   );
 }

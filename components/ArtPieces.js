@@ -5,7 +5,7 @@ const StyledList = styled.li`
   list-style: none;
 `;
 
-export default function ArtPiece({ pieces }) {
+export default function ArtPieces({ pieces }) {
   return (
     <>
       <h1> All art pieces:</h1>
