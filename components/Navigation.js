@@ -1,0 +1,41 @@
+import styled from "styled-components";
+
+const StyledNavigation = styled.nav`
+  background-color: grey;
+  padding: 10px;
+`;
+
+const StyledList = styled.ul`
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: darkgray;
+  }
+`;
+export default function Navigation() {
+  return (
+    <>
+      <StyledNavigation>
+        <StyledList>
+          <li>
+            <StyledLink href="/">Spotlight</StyledLink>
+          </li>
+
+          <li>
+            <StyledLink href="/art-pieces">Art Pieces</StyledLink>
+          </li>
+        </StyledList>
+      </StyledNavigation>
+    </>
+  );
+}

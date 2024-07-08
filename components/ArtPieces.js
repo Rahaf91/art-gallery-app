@@ -1,23 +1,23 @@
 import styled from "styled-components";
 import ArtPiecePreview from "./ArtPiecePreview";
 
-const StyledList = styled.li`
+const StyledListItem = styled.li`
   list-style: none;
 `;
 
 export default function ArtPieces({ pieces }) {
   return (
-    <>
-      <h1> All art pieces:</h1>
+    <div>
+      <h2> All art pieces</h2>
       <ul>
         {pieces.map((piece) => {
           return (
-            <StyledList key={piece.slug}>
+            <StyledListItem key={piece.slug}>
               <ArtPiecePreview piece={piece} />
-            </StyledList>
+            </StyledListItem>
           );
         })}
       </ul>
-    </>
+    </div>
   );
 }

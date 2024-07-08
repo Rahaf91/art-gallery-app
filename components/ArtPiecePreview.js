@@ -8,8 +8,8 @@ const StyledImage = styled(Image)`
 const ImageWrapper = styled.div`
   display: flex;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
 `;
 
 export default function ArtPiecePreview({ piece }) {
@@ -25,8 +25,12 @@ export default function ArtPiecePreview({ piece }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 200px"
         />
       </ImageWrapper>
-      <h3>Title: {name}</h3>
-      <p>Artist: {artist}</p>
+      <p>
+        <strong>Title:</strong> {name}
+      </p>
+      <p>
+        <strong>Artist:</strong> {artist}
+      </p>
     </>
   );
 }
