@@ -24,19 +24,19 @@ const StyledLink = styled(Link)`
 `;
 
 export default function ArtPiecePreview({ piece }) {
-  const { imageSource, title, artist, slug } = piece;
+  const { imageSource, name, artist, slug } = piece;
 
   return (
     <StyledLink href={slug}>
       <ImageWrapper>
         <StyledImage
           src={imageSource}
-          alt={title}
+          alt={name}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 200px"
         />
       </ImageWrapper>
-      <h3>Title: {title}</h3>
+      <h3>Title: {name}</h3>
       <p>Artist: {artist}</p>
     </StyledLink>
   );
