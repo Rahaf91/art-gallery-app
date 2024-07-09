@@ -7,7 +7,7 @@ const StyledListItem = styled.li`
 
 export default function ArtPieces({ pieces }) {
   return (
-    <div>
+    <>
       <h2> All art pieces</h2>
       <ul>
         {pieces.map((piece) => {
@@ -18,6 +18,6 @@ export default function ArtPieces({ pieces }) {
           );
         })}
       </ul>
-    </div>
+    </>
   );
 }
