@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Link from "next/link";
 const StyledNavigation = styled.nav`
   background-color: grey;
   padding: 10px;
@@ -12,7 +12,7 @@ const StyledList = styled.ul`
   align-items: center;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: white;
   padding: 5px 10px;
