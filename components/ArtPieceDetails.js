@@ -3,7 +3,6 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const ImageWrapper = styled.div`
-  display: flex;
   position: relative;
   width: 300px;
   height: 300px;

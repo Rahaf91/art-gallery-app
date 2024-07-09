@@ -6,7 +6,6 @@ const StyledImage = styled(Image)`
 `;
 
 const ImageWrapper = styled.div`
-  display: flex;
   position: relative;
   width: 300px;
   height: 300px;
