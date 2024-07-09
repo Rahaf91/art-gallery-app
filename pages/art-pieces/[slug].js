@@ -1,17 +1,17 @@
 import ArtPieceDetails from "@/components/ArtPieceDetails";
 import { useRouter } from "next/router";
-export default function ArtPieceDetailsPage({ data }) {
+export default function ArtPieceDetailsPage({ artPieces }) {
   const router = useRouter();
   const { slug } = router.query;
-  const artPieces = data.find((artpiece) => artpiece.slug === slug);
+  const painitngs = artPieces.find((artpiece) => artpiece.slug === slug);
 
   return (
     <ArtPieceDetails
-      image={artPieces.imageSource}
-      title={artPieces.name}
-      artist={artPieces.artist}
-      year={artPieces.year}
-      genre={artPieces.genre}
+      image={painitngs.imageSource}
+      title={painitngs.name}
+      artist={painitngs.artist}
+      year={painitngs.year}
+      genre={painitngs.genre}
     />
   );
 }
