@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
-
+import FavoriteButton from "./FavoriteButton";
 const ImageWrapper = styled.div`
   position: relative;
   width: 300px;
@@ -10,6 +10,10 @@ const ImageWrapper = styled.div`
 export default function ArtPieceDetails({ image, title, artist, year, genre }) {
   return (
     <>
+      <FavoriteButton
+        isFavorite={isFavorite}
+        onToggleFavorite={onToggleFavorite}
+      />
       <ImageWrapper>
         <Image
           src={image}

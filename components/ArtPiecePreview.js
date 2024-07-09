@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 import Link from "next/link";
+import FavoriteButton from "./FavoriteButton";
 const StyledImage = styled(Image)`
   object-fit: cover;
 `;
@@ -11,12 +12,16 @@ const ImageWrapper = styled.div`
   height: 300px;
 `;
 
-export default function ArtPiecePreview({ piece }) {
-  const { imageSource, name, artist, slug } = piece;
+export default function ArtPiecePreview({ artPiece }) {
+  const { imageSource, name, artist, slug } = artPiece;
 
   return (
     <>
       <Link href={`/art-pieces/${slug}`}>
+        <FavoriteButton
+          isFavorite={isFavorite}
+          onToggleFavorite={onToggleFavorite}
+        />
         <ImageWrapper>
           <StyledImage
             src={imageSource}

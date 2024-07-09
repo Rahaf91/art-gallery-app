@@ -5,15 +5,15 @@ const StyledListItem = styled.li`
   list-style: none;
 `;
 
-export default function ArtPieces({ pieces }) {
+export default function ArtPieces({ artPieces }) {
   return (
     <>
       <h2> All art pieces</h2>
       <ul>
-        {pieces.map((piece) => {
+        {artPieces.map((artPiece) => {
           return (
-            <StyledListItem key={piece.slug}>
-              <ArtPiecePreview piece={piece} />
+            <StyledListItem key={artPiece.slug}>
+              <ArtPiecePreview artPiece={artPiece} />
             </StyledListItem>
           );
         })}

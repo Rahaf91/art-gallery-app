@@ -1,5 +1,5 @@
 import Spotlight from "@/components/Spotlight";
 
-export default function SpotlightPage({ data }) {
-  return <Spotlight artPieces={data} />;
+export default function SpotlightPage({ artPieces }) {
+  return <Spotlight artPieces={artPieces} />;
 }
