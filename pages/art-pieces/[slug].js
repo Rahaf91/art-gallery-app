@@ -12,9 +12,6 @@ export default function ArtPieceDetailsPage({ data }) {
       artist={artPieces.artist}
       year={artPieces.year}
       genre={artPieces.genre}
-      onClickBack={() => {
-        router.push("/art-pieces");
-      }}
     />
   );
 }

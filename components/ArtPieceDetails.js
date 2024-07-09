@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
 
 const ImageWrapper = styled.div`
@@ -7,14 +8,7 @@ const ImageWrapper = styled.div`
   width: 300px;
   height: 300px;
 `;
-export default function ArtPieceDetails({
-  image,
-  title,
-  artist,
-  year,
-  genre,
-  onClickBack,
-}) {
+export default function ArtPieceDetails({ image, title, artist, year, genre }) {
   return (
     <>
       <ImageWrapper>
@@ -29,7 +23,7 @@ export default function ArtPieceDetails({
       <p>{year}</p>
       <p>{genre}</p>
 
-      <button onClick={onClickBack}>Go back</button>
+      <Link href="/art-pieces">Go back</Link>
     </>
   );
 }
