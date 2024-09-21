@@ -19,7 +19,7 @@ const StyledLink = styled(Link)`
   border-radius: 5px;
 
   &:hover {
-    background-color: darkgray;
+    background-color: darkcyan;
   }
 `;
 export default function Navigation() {
@@ -33,6 +33,9 @@ export default function Navigation() {
 
           <li>
             <StyledLink href="/art-pieces">Art Pieces</StyledLink>
+          </li>
+          <li>
+            <StyledLink href="/favorites">Favorites</StyledLink>
           </li>
         </StyledList>
       </StyledNavigation>

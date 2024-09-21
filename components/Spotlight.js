@@ -5,33 +5,35 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  border-radius: 50px;
 `;
 
 const ImageWrapper = styled.div`
-  display: flex;
   position: relative;
   width: 500px;
   height: 700px;
+  margin-top: 10px;
+  box-shadow: 10px 6px 5px black;
+`;
+const MainHeading = styled.h1`
+  text-align: center;
 `;
 
 export default function Spotlight({ artPieces }) {
   const randomPiece = Math.floor(Math.random() * artPieces.length);
-  const { imageSource, artist } = artPieces[randomPiece];
+  const { imageSource, artist, name } = artPieces[randomPiece];
 
   return (
-    <Container>
-      <h1>ART GALLERY OF RAI</h1>
-      <ImageWrapper>
-        {" "}
-        <Image
-          src={imageSource}
-          alt={artist}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 200px"
-        />
-      </ImageWrapper>
+    <>
+      <MainHeading>ART GALLERY</MainHeading>
+      <Container>
+        <p>Title: {name}</p>
+        <ImageWrapper>
+          <Image src={imageSource} alt={artist} fill />
+        </ImageWrapper>
 
-      <p>Artist: {artist}</p>
-    </Container>
+        <p>Artist: {artist}</p>
+      </Container>
+    </>
   );
 }
